@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Page!!</title>
+  <link rel="stylesheet" href="first.css" />
+</head>
+<body>
+
+ <!-- Hamburger Menu -->
+  <div class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <!-- New Section Link -->
+    
+  </div>
+  
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="home.html" id="home-link">Home</a></li>
+      <li><a href="players.html">ICC Men T20 2024</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+
+  <script>
+    document.getElementById("home-link").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      window.location.href = "home.html"; // Redirect to the new page
+    });
+  </script>
+
+
+
+  <!-- Introduction Section -->
+  <section class="introduction">
+    <div>
+      <span class="text">&nbsp;icc t20 wc &nbsp;</span>
+      <span class="hover-text">&nbsp;icc t20 wc &nbsp;</span>
+    </div>
+  </section>
+
+  <!-- Matches Section -->
+  <section class="matches">
+    <div class="carousel">
+      <!-- List Items -->
+      <div class="list">
+        <div class="item">
+          <img src="images/indvsire.png" alt="IND vs IRE">
+        </div>
+        <div class="item">
+          <img src="images/indvspak.png" alt="IND vs PAK">
+        </div>
+        <div class="item">
+          <img src="images/indvsus.png" alt="IND vs US">
+        </div>
+        <div class="item">
+          <img src="images/indvsus.png" alt="IND vs CAN">
+        </div>
+      </div>
+
+      <!-- Thumbnails -->
+      <div class="thumbnail">
+        <div class="item">
+          <img src="images/indvsire.png" alt="IND vs IRE Thumbnail">
+          <div class="content">
+            <div class="title">IND vs IRE</div>
+            <div class="description">T20 8th Match</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/indvspak.png" alt="IND vs PAK Thumbnail">
+          <div class="content">
+            <div class="title">IND vs PAK</div>
+            <div class="description">T20 19th Match</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/indvsus.png" alt="IND vs US Thumbnail">
+          <div class="content">
+            <div class="title">IND vs US</div>
+            <div class="description">T20 25th Match</div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/indvsus.png" alt="IND vs CAN Thumbnail">
+          <div class="content">
+            <div class="title">IND vs CAN</div>
+            <div class="description">T20 33rd Match</div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation Arrows -->
+      <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+      <!-- Time Indicator -->
+      <div class="time"></div>
+    </div>
+  </section>
+
+  <script src="first.js"></script>
+</body>
+</html>

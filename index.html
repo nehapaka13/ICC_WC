@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>ICC T20 WC 2024 | Login Page</title>
+</head>
+<body>
+  <div class="container">
+    <div class="login__container">
+      <div class="top__content">
+        <p>Don't you have an account?</p>
+        <button onclick="location.href='signup.html'">Sign Up</button>
+        <h1>WELCOME</h1>
+      </div>
+      <div class="bottom__content">
+        <form id="loginForm">
+          <div class="form__group">
+            <span><i class="ri-user-line"></i></span>
+            <input type="text" id="username" placeholder="Username" required>
+          </div>
+          <div class="form__group">
+            <span><i class="ri-lock-line"></i></span>
+            <input type="password" id="password" placeholder="Password" required>
+          </div>
+          <button type="button" onclick="login()">LOGIN</button>
+          <p><a href="#" onclick="showPasswordHint()">Forgot your password?</a></p>
+        </form>
+        <div id="passwordHint" style="display: none;">
+          <p id="puzzleQuestion"></p>
+          <input type="text" id="passwordHintAnswer" placeholder="Your answer">
+          <button type="button" onclick="checkPasswordHint()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "Who won the ICC Under-19 Cricket World Cup 2018?",
+        answer: ["india", "india under-19", "india u19", "india u-19", "india u 19"]
+      },
+      {
+        question: "Who is the Head Coach for the ICC Men T20 World Cup 2024?",
+        answer: ["rahul dravid", "dravid"]
+      },
+      {
+        question: "Who was the captain of the ICC Cricket World Cup 1983?",
+        answer: ["kapil dev", "kapil"]
+      }
+    ];
+
+    let currentQuestion = null;
+
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      
+      var validUsername = "admin";
+      var validPassword = "admin@123";
+      
+      if (username === validUsername && password === validPassword) {
+        window.location.href = "first.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    }
+
+    function showPasswordHint() {
+      document.getElementById("passwordHint").style.display = "block";
+      currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+      document.getElementById("puzzleQuestion").innerText = currentQuestion.question;
+    }
+
+    function checkPasswordHint() {
+      var answer = document.getElementById("passwordHintAnswer").value.toLowerCase();
+      if (currentQuestion.answer.includes(answer)) {
+        alert("Your password hint is: ******123");
+      } else {
+        alert("Incorrect answer. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
+

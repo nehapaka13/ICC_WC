@@ -1,0 +1,131 @@
+/* Initially hide all content */
+body {
+    background-image: url('images/home_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Style for content sections */
+.home .content {
+    display: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    width: 90%; /* Adjust width as needed */
+    max-width: 600px; /* Limit maximum width */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    position: absolute;
+    top: 5%; /* Adjust top position */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left; /* Center content horizontally */
+}
+/* Style for expanded content */
+.home .content.expanded {
+    display: block;
+    animation: slideIn 0.5s forwards;
+}
+
+/* Additional CSS for each content section */
+.home .content:nth-of-type(1) {
+    background-color: #ec9898; /* Adjusted background color */
+}
+
+.home .content:nth-of-type(2) {
+    background-color: #c3f8ff; /* Adjusted background color */
+}
+
+.home .content:nth-of-type(3) {
+    background-color: #c0ffd2; /* Adjusted background color */
+}
+
+.home .content:nth-of-type(4) {
+    background-color: #fcbeb1; /* Adjusted background color */
+}
+
+.home .content:nth-of-type(5) {
+    background-color: #c0ecff; /* Adjusted background color */
+}
+
+/* Animation for sliding in */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Style for headings */
+.home .heading {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 40px;
+    border: 2px solid #f7f1f1;
+    border-radius: 15px;
+    color: #2a2828;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to left, #2a2828, #f7f1f1); /* Gradient background from dark to light */
+}
+
+/* Additional CSS for each heading */
+.home .heading:nth-of-type(1) {
+    background: linear-gradient(to left, #ff9999, #f7f1f1); /* Light red gradient for first heading */
+}
+
+.home .heading:nth-of-type(2) {
+    background: linear-gradient(to left, #99ccff, #f7f1f1); /* Light blue gradient for second heading */
+    width: 350px;
+}
+
+.home .heading:nth-of-type(3) {
+    background: linear-gradient(to left, #ccff99, #f7f1f1); /* Light green gradient for third heading */
+    width: 400px;
+}
+
+.home .heading:nth-of-type(4) {
+    background: linear-gradient(to left, #ffcc99, #f7f1f1); /* Light orange gradient for fourth heading */
+    width: 450px;
+}
+
+.home .heading:nth-of-type(5) {
+    background: linear-gradient(to left, #ccccff, #f7f1f1); /* Light purple gradient for fifth heading */
+    width: 500px;
+}
+
+/* New animation for sliding heading */
+@keyframes slideHeading {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Apply animation to headings */
+.home .heading {
+    animation: slideHeading 0.5s forwards;
+}
+
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
