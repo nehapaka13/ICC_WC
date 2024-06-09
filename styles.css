@@ -190,7 +190,7 @@ body {
 #passwordHint p,
 #passwordHint input,
 #passwordHint button {
-  color: #fff;
+  color: #000000;
 }
 
 .form__group {
