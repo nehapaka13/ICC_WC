@@ -164,7 +164,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color: #fff; /* Ensure text is visible against the background */
+  color: #0000; /* Ensure text is visible against the background */
 }
 
 .container {
